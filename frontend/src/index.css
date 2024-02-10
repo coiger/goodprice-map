@@ -18,3 +18,8 @@ code {
 .leaflet-popup-tip-container {
   display: none;
 }
+
+.leaflet-popup {
+  margin-left: 10px;
+  width: 300px;
+}
