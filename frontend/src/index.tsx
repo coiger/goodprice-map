@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import '@fontsource/noto-sans-kr/latin-400.css';
+import '@fontsource/noto-sans-kr/latin-600.css';
+import '@fontsource/noto-sans-kr/latin-700.css';
+import '@fontsource/noto-sans-kr/korean-400.css';
+import '@fontsource/noto-sans-kr/korean-600.css';
+import '@fontsource/noto-sans-kr/korean-700.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
