@@ -15,6 +15,10 @@ code {
   font-size: 14px;
 }
 
+.leaflet-container {
+  z-index: 0;
+}
+
 .leaflet-popup-tip-container {
   display: none;
 }

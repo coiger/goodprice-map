@@ -1,10 +1,11 @@
 import Map from 'components/Map';
+import { FloatButton } from 'antd';
+import { GithubOutlined, HomeOutlined, LinkOutlined } from '@ant-design/icons';
 import styles from './App.module.css';
 
 function App() {
   return (
     <div>
-      <div className={styles.filter} />
       <Map
         places={[
           {
@@ -20,6 +21,27 @@ function App() {
           },
         ]}
       />
+      <FloatButton.Group
+        className={styles['btn-grp']}
+        trigger='click'
+        type='primary'
+        style={{ right: 24 }}
+        icon={<LinkOutlined />}>
+        <a
+          href='https://github.com/coiger/goodprice.map'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Open github repository'>
+          <FloatButton icon={<GithubOutlined />} />
+        </a>
+        <a
+          href='https://www.goodprice.go.kr/index.jsp'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Open goodprice homepage'>
+          <FloatButton icon={<HomeOutlined />} />
+        </a>
+      </FloatButton.Group>
     </div>
   );
 }
