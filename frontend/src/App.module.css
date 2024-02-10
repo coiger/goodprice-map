@@ -1,3 +1,20 @@
+.filter {
+  position: absolute;
+  bottom: 40px;
+  left: 24px;
+  width: 300px;
+  max-width: calc(100vw - 100px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background: padding-box padding-box rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .btn-grp a:not(:last-child) button {
   margin-bottom: 16px;
 }

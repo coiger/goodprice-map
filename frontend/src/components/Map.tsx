@@ -6,9 +6,10 @@ import styles from './Map.module.css';
 
 interface MapProps {
   places: Place[];
+  categoryFilter: string[];
 }
 
-function Map({ places }: MapProps) {
+function Map({ places, categoryFilter }: MapProps) {
   const [center, setCenter] = useState<LatLngExpression | null>(null);
 
   useEffect(() => {
@@ -25,20 +26,22 @@ function Map({ places }: MapProps) {
     center && (
       <MapContainer center={center} zoom={17} style={{ height: '100vh', width: '100vw' }}>
         <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-        {places.map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
-          <Marker key={id} position={[latitude, longitude]}>
-            <Popup>
-              <div className='default'>
-                <h3 className={styles.title}>{`[${category}] ${name}`}</h3>
-                <ul className={styles.list}>
-                  <li>{`${menu} ${price}원`}</li>
-                  <li>{address}</li>
-                  <li>{contact}</li>
-                </ul>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        {places
+          .filter(({ category }) => categoryFilter.includes(category))
+          .map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
+            <Marker key={id} position={[latitude, longitude]}>
+              <Popup>
+                <div className='default'>
+                  <h3 className={styles.title}>{`[${category}] ${name}`}</h3>
+                  <ul className={styles.list}>
+                    <li>{`${menu} ${price}원`}</li>
+                    <li>{address}</li>
+                    <li>{contact}</li>
+                  </ul>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
       </MapContainer>
     )
   );

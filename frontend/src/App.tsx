@@ -1,26 +1,38 @@
 import Map from 'components/Map';
 import { FloatButton } from 'antd';
 import { GithubOutlined, HomeOutlined, LinkOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+import CategoryFilter from 'components/CategoryFilter';
 import styles from './App.module.css';
 
 function App() {
+  const places = [
+    {
+      id: 1,
+      category: '일식',
+      name: '동명',
+      menu: '등심카츠',
+      price: 6900,
+      contact: '02-6339-3331',
+      address: '서울특별시 구로구 경인로47길 6',
+      latitude: 37.5000160158822,
+      longitude: 126.86732495519,
+    },
+  ];
+
+  const categoryList = places.map(({ category }) => category);
+  const [categoryFilter, setCategoryFilter] = useState<string[]>(categoryList);
+
   return (
     <div>
-      <Map
-        places={[
-          {
-            id: 1,
-            category: '일식',
-            name: '동명',
-            menu: '등심카츠',
-            price: 6900,
-            contact: '02-6339-3331',
-            address: '서울특별시 구로구 경인로47길 6',
-            latitude: 37.5000160158822,
-            longitude: 126.86732495519,
-          },
-        ]}
-      />
+      <Map places={places} categoryFilter={categoryFilter} />
+      <div className={styles.filter}>
+        <CategoryFilter
+          categoryList={categoryList}
+          categoryFilter={categoryFilter}
+          setCategoryFilter={setCategoryFilter}
+        />
+      </div>
       <FloatButton.Group
         className={styles['btn-grp']}
         trigger='click'
