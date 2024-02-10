@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
@@ -15,7 +14,6 @@ function Map({ places }: MapProps) {
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
-        console.log(position);
         setCenter([position.coords.latitude, position.coords.longitude]);
       });
     } else {
