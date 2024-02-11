@@ -1,32 +1,41 @@
-import Map from 'components/Map';
 import { FloatButton } from 'antd';
 import { GithubOutlined, HomeOutlined, LinkOutlined } from '@ant-design/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { LatLngExpression } from 'leaflet';
+import Map from 'components/Map';
+import Search from 'components/Search';
 import CategoryFilter from 'components/CategoryFilter';
+import { gotoUserLocation } from 'utils';
+import placesData from 'db/places.json';
 import styles from './App.module.css';
 
 function App() {
-  const places = [
-    {
-      id: 1,
-      category: '일식',
-      name: '동명',
-      menu: '등심카츠',
-      price: 6900,
-      contact: '02-6339-3331',
-      address: '서울특별시 구로구 경인로47길 6',
-      latitude: 37.5000160158822,
-      longitude: 126.86732495519,
-    },
-  ];
+  const places = placesData
+    .filter(({ category, latitude, longitude }) => category && latitude && longitude)
+    .map(place => ({
+      ...place,
+      price: +place.price,
+      latitude: +place.latitude,
+      longitude: +place.longitude,
+      contact: `${place.contact}`,
+    }));
 
-  const categoryList = places.map(({ category }) => category);
+  const categoryList = Array.from(new Set(places.map(({ category }) => category)));
   const [categoryFilter, setCategoryFilter] = useState<string[]>(categoryList);
+
+  const [position, setPosition] = useState<LatLngExpression>([37.5537586, 126.9809696]); // 서울의 중심 남산
+
+  useEffect(() => {
+    gotoUserLocation(setPosition)();
+  }, []);
 
   return (
     <div>
-      <Map places={places} categoryFilter={categoryFilter} />
-      <div className={styles.filter}>
+      <Map center={position} places={places} categoryFilter={categoryFilter} />
+      <div className={`${styles.search} ${styles.box}`}>
+        <Search setPosition={setPosition} />
+      </div>
+      <div className={`${styles.filter} ${styles.box}`}>
         <CategoryFilter
           categoryList={categoryList}
           categoryFilter={categoryFilter}
