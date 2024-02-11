@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "착한가격업소 지도",
+  "name": "GPS 및 지도 서비스를 통해 내 주변 또는 검색한 위치 주변의 행정안전부 착한가격업소를 안내합니다.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
+      "src": "map.png",
       "type": "image/png",
       "sizes": "512x512"
     }
