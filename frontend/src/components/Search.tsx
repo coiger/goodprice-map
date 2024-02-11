@@ -24,7 +24,7 @@ function Search({ setPosition }: SearchProps) {
       if (status === kakao.maps.services.Status.OK && data[0].y && data[0].x) {
         setPosition([data[0].y, data[0].x]);
       } else {
-        message.error('검색된 장소가 없습니다.');
+        message.error('검색된 장소가 없습니다.', 1);
       }
     });
   };
