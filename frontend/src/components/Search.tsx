@@ -1,5 +1,5 @@
 import { AimOutlined } from '@ant-design/icons';
-import { Input } from 'antd';
+import { Input, message } from 'antd';
 import { LatLngExpression } from 'leaflet';
 import { memo } from 'react';
 import { gotoUserLocation } from 'utils';
@@ -23,6 +23,8 @@ function Search({ setPosition }: SearchProps) {
     ps.keywordSearch(value, (data: { x: number; y: number }[], status: unknown) => {
       if (status === kakao.maps.services.Status.OK && data[0].y && data[0].x) {
         setPosition([data[0].y, data[0].x]);
+      } else {
+        message.error('검색된 장소가 없습니다.');
       }
     });
   };
