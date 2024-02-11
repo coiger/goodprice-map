@@ -4,15 +4,20 @@ import { LatLngExpression } from 'leaflet';
 import { memo } from 'react';
 import { gotoUserLocation } from 'utils';
 
+const { kakao } = window;
+const ps = new kakao.maps.services.Places();
+
 interface SearchProps {
   setPosition: (position: LatLngExpression) => void;
 }
 
 function Search({ setPosition }: SearchProps) {
   const searchPosition = (value: string) => {
-    // value로 카카오맵 검색해서
-    // setPosition
-    console.log(value);
+    ps.keywordSearch(value, (data: { x: number; y: number }[], status: unknown) => {
+      if (status === kakao.maps.services.Status.OK && data[0].y && data[0].x) {
+        setPosition([data[0].y, data[0].x]);
+      }
+    });
   };
 
   return (
