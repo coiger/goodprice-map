@@ -11,6 +11,7 @@ function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: Cat
   return (
     <Select
       mode='multiple'
+      showSearch={false}
       style={{ width: '100%' }}
       value={categoryFilter.sort((a, b) => a.localeCompare(b))}
       onChange={setCategoryFilter}
