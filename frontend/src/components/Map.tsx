@@ -27,9 +27,9 @@ function Map({ places, categoryFilter }: MapProps) {
       <MapContainer center={center} zoom={17} style={{ height: '100vh', width: '100vw' }}>
         <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         {places
-          .filter(({ category }) => categoryFilter.includes(category))
+          .filter(({ category, latitude, longitude }) => categoryFilter.includes(category) && latitude && longitude)
           .map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
-            <Marker key={id} position={[latitude, longitude]}>
+            <Marker key={id} position={[latitude as number, longitude as number]}>
               <Popup>
                 <div className='default'>
                   <h3 className={styles.title}>{`[${category}] ${name}`}</h3>
