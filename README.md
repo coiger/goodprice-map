@@ -21,10 +21,3 @@ https://colab.research.google.com/drive/1TdDXTQ74lNTKl9xjIlk9BnAZpgUUVi_x?authus
 #### 데이터 필터링
 1. 최종적으로 위도 경도 계산에 실패한 데이터 제외
 2. 업종 정보가 빈 값인 데이터 제외
-
-## TODO
-- [ ] 데이터 전처리 : 한식_기타 등 카테고리(업종)와 서브 카테고리로 나눌 수 있는 정보 나누기
-- [ ] LAZY LOADING
-  - [ ] FE: 현재 지도에 표시될 마커 및 팝업만 렌더링
-  - [ ] BE: 업소 정보를 API화 하고, 지도에 표시될 업소만 가져오도록 최적화 (or CDN)
-- [ ] GA4
