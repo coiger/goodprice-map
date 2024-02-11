@@ -10,12 +10,13 @@ interface CategoryFilterProps {
 function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: CategoryFilterProps) {
   return (
     <Select
+      allowClear
       mode='multiple'
       showSearch={false}
       style={{ width: '100%' }}
       value={categoryFilter.sort((a, b) => a.localeCompare(b))}
       onChange={setCategoryFilter}
-      options={categoryList.map(category => ({ value: category }))}
+      options={categoryList.sort((a, b) => a.localeCompare(b)).map(category => ({ value: category }))}
     />
   );
 }
