@@ -13,8 +13,9 @@
 - 주차 가능 여부 등 엑셀로 제공되지 않는 데이터는 사용하지 않았다.
 
 ### 전처리
+- https://colab.research.google.com/drive/1TdDXTQ74lNTKl9xjIlk9BnAZpgUUVi_x?authuser=0#scrollTo=iEJ4f1dhEmTz
+
 #### 위도 경도 계산
-https://colab.research.google.com/drive/1TdDXTQ74lNTKl9xjIlk9BnAZpgUUVi_x?authuser=0#scrollTo=iEJ4f1dhEmTz
 1. geocoders의 Nominatim을 사용하여 주소 값을 기준으로 위도 경도 계산
 2. 위도 경도가 계산되지 않는 장소는 다시 카카오맵 search api를 사용해 계산해본다.
 
