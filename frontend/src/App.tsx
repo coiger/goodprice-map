@@ -1,5 +1,5 @@
-import { FloatButton } from 'antd';
-import { GithubOutlined, HomeOutlined, LinkOutlined } from '@ant-design/icons';
+import { Button, FloatButton } from 'antd';
+import { DownCircleOutlined, GithubOutlined, HomeOutlined, LinkOutlined, UpCircleOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 import Map from 'components/Map';
@@ -29,18 +29,28 @@ function App() {
     gotoUserLocation(setPosition)();
   }, []);
 
+  const [showFullCategoryList, setShowFullCategoryList] = useState<boolean>(true);
+
   return (
     <div>
       <Map center={position} places={places} categoryFilter={categoryFilter} />
       <div className={`${styles.search} ${styles.box}`}>
         <Search setPosition={setPosition} />
       </div>
-      <div className={`${styles.filter} ${styles.box}`}>
-        <CategoryFilter
-          categoryList={categoryList}
-          categoryFilter={categoryFilter}
-          setCategoryFilter={setCategoryFilter}
-        />
+      <div className={`${styles.filter} ${styles.box} ${showFullCategoryList ? '' : styles.hidden}`}>
+        <div className={styles['filter-inner']}>
+          <CategoryFilter
+            categoryList={categoryList}
+            categoryFilter={categoryFilter}
+            setCategoryFilter={setCategoryFilter}
+          />
+          <Button
+            className={styles['category-show-btn']}
+            type='text'
+            icon={showFullCategoryList ? <DownCircleOutlined /> : <UpCircleOutlined />}
+            onClick={() => setShowFullCategoryList(v => !v)}
+          />
+        </div>
       </div>
       <FloatButton.Group
         className={styles['btn-grp']}

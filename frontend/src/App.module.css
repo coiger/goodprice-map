@@ -10,9 +10,35 @@
 
 .filter {
   position: absolute;
-  bottom: 46px;
+  bottom: 52px;
   left: 24px;
-  width: calc(100vw - 110px);
+  max-width: calc(100vw - 110px);
+}
+
+.filter-inner {
+  display: flex;
+  align-items: flex-end;
+}
+
+.hidden {
+  height: 34px;
+  overflow: hidden;
+}
+
+.hidden .filter-inner {
+  align-items: flex-start;
+}
+
+.hidden div {
+  position: relative;
+}
+
+.category-show-btn {
+  padding: 2px !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
 }
 
 .search {

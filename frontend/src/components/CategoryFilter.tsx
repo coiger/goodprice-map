@@ -1,4 +1,5 @@
-import { Select } from 'antd';
+import { Space } from 'antd';
+import CheckableTag from 'antd/es/tag/CheckableTag';
 import { memo } from 'react';
 
 interface CategoryFilterProps {
@@ -8,16 +9,24 @@ interface CategoryFilterProps {
 }
 
 function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: CategoryFilterProps) {
+  const handleChange = (tag: string, checked: boolean) => {
+    const nextCategoryFilter = checked ? [...categoryFilter, tag] : categoryFilter.filter(t => t !== tag);
+    setCategoryFilter(nextCategoryFilter);
+  };
+
   return (
-    <Select
-      allowClear
-      mode='multiple'
-      showSearch={false}
-      style={{ width: '100%' }}
-      value={categoryFilter.sort((a, b) => a.localeCompare(b))}
-      onChange={setCategoryFilter}
-      options={categoryList.sort((a, b) => a.localeCompare(b)).map(category => ({ value: category }))}
-    />
+    <Space size={[0, 8]} wrap>
+      {categoryList
+        .sort((a, b) => a.localeCompare(b))
+        .map(category => (
+          <CheckableTag
+            key={category}
+            checked={categoryFilter.includes(category)}
+            onChange={checked => handleChange(category, checked)}>
+            {category}
+          </CheckableTag>
+        ))}
+    </Space>
   );
 }
 
