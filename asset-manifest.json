@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/goodprice-map/static/css/main.b822af46.css",
+    "main.js": "/goodprice-map/static/js/main.5f6faad0.js",
+    "static/js/592.bf6ca574.chunk.js": "/goodprice-map/static/js/592.bf6ca574.chunk.js",
+    "static/media/noto-sans-kr-korean-700-normal.woff": "/goodprice-map/static/media/noto-sans-kr-korean-700-normal.02ec4f7b0a45cad8e3e8.woff",
+    "static/media/noto-sans-kr-korean-600-normal.woff": "/goodprice-map/static/media/noto-sans-kr-korean-600-normal.cd49516bc9a3c4e81fe7.woff",
+    "static/media/noto-sans-kr-korean-400-normal.woff": "/goodprice-map/static/media/noto-sans-kr-korean-400-normal.519c0456d81fe5284ba4.woff",
+    "static/media/noto-sans-kr-korean-700-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-korean-700-normal.267bc659136d423fca21.woff2",
+    "static/media/noto-sans-kr-korean-600-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-korean-600-normal.d18625b333ec3d769f94.woff2",
+    "static/media/noto-sans-kr-korean-400-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-korean-400-normal.abb47e7462da3730893a.woff2",
+    "static/media/noto-sans-kr-latin-700-normal.woff": "/goodprice-map/static/media/noto-sans-kr-latin-700-normal.6b914e8724f2c95034c8.woff",
+    "static/media/noto-sans-kr-latin-600-normal.woff": "/goodprice-map/static/media/noto-sans-kr-latin-600-normal.8a81b16f44453f241dd8.woff",
+    "static/media/noto-sans-kr-latin-400-normal.woff": "/goodprice-map/static/media/noto-sans-kr-latin-400-normal.49d2ec301f620356e7aa.woff",
+    "static/media/noto-sans-kr-latin-700-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-latin-700-normal.92c80525ee85e01ffb46.woff2",
+    "static/media/noto-sans-kr-latin-600-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-latin-600-normal.30707168ec60635b9009.woff2",
+    "static/media/noto-sans-kr-latin-400-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-latin-400-normal.fd25d8b8e286c9fa82a0.woff2",
+    "index.html": "/goodprice-map/index.html",
+    "main.b822af46.css.map": "/goodprice-map/static/css/main.b822af46.css.map",
+    "main.5f6faad0.js.map": "/goodprice-map/static/js/main.5f6faad0.js.map",
+    "592.bf6ca574.chunk.js.map": "/goodprice-map/static/js/592.bf6ca574.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b822af46.css",
+    "static/js/main.5f6faad0.js"
+  ]
+}
