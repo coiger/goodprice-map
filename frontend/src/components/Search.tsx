@@ -4,6 +4,13 @@ import { LatLngExpression } from 'leaflet';
 import { memo } from 'react';
 import { gotoUserLocation } from 'utils';
 
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    kakao: any;
+  }
+}
+
 const { kakao } = window;
 const ps = new kakao.maps.services.Places();
 
