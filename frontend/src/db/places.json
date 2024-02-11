@@ -495,17 +495,6 @@
     "longitude": 126.840926063489
   },
   {
-    "id": 46,
-    "category": "이미용업",
-    "name": "홍진미용실",
-    "menu": "커트(여성)",
-    "price": 5000,
-    "contact": "02-2617-6973",
-    "address": "서울특별시 구로구 서해한로 24길 29",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 47,
     "category": "기타서비스업",
     "name": "리메인커피",
@@ -944,28 +933,6 @@
     "address": "감곡면 장감로 163",
     "latitude": 37.1161822,
     "longitude": 127.6434257
-  },
-  {
-    "id": 87,
-    "category": "한식_한정식",
-    "name": "무너미밥집",
-    "menu": "정식",
-    "price": 12000,
-    "contact": "043-873-5295",
-    "address": "읍성읍 예술로 82",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
-    "id": 88,
-    "category": "이미용업",
-    "name": "가보세미용실",
-    "menu": "커트(성인)",
-    "price": 12000,
-    "contact": "043-873-3900",
-    "address": "읍성읍 읍내리 307-1",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 89,
@@ -1782,17 +1749,6 @@
     "longitude": 127.2013299
   },
   {
-    "id": 163,
-    "category": "",
-    "name": "커피먼저",
-    "menu": "아메리카노",
-    "price": 2000,
-    "contact": "010-2059-0000",
-    "address": "대구광역시 서구 평리로 413(평리동)",
-    "latitude": 35.8588072,
-    "longitude": 128.5314799
-  },
-  {
     "id": 164,
     "category": "한식_면류",
     "name": "미주싱싱바지락칼국수",
@@ -2352,28 +2308,6 @@
     "address": "벚꽃로 309 (1호선 상행선 10-4 앞)",
     "latitude": 37.4815947,
     "longitude": 126.8826166
-  },
-  {
-    "id": 215,
-    "category": "",
-    "name": "기계우동",
-    "menu": "온우동",
-    "price": 4500,
-    "contact": "054-858-7717",
-    "address": "옥동3길 41-8, A동(옥동)",
-    "latitude": 36.5613877,
-    "longitude": 128.7028841
-  },
-  {
-    "id": 216,
-    "category": "",
-    "name": "한우축산 식당",
-    "menu": "불고기(200g)",
-    "price": 10000,
-    "contact": "054-855-8100",
-    "address": "하이마로 141(송현동)",
-    "latitude": 36.5742779,
-    "longitude": 128.6779271
   },
   {
     "id": 217,
@@ -3089,17 +3023,6 @@
     "address": "구미시 형곡동로 73-1(형곡동)",
     "latitude": 36.1022454,
     "longitude": 128.3362158
-  },
-  {
-    "id": 282,
-    "category": "이미용업",
-    "name": "남자만들기",
-    "menu": "남성커트",
-    "price": 6000,
-    "contact": "010-4747-5343",
-    "address": "경상북도 칠곡군 북삼읍 안강2길 20-1",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 283,
@@ -3993,17 +3916,6 @@
     "longitude": 127.1337148
   },
   {
-    "id": 364,
-    "category": "한식_기타",
-    "name": "송이네닭집",
-    "menu": "닭강정(대)",
-    "price": 10000,
-    "contact": "02-863-8713",
-    "address": "신원5길 21, 1층",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 365,
     "category": "한식_일반",
     "name": "얼큰수제비 해물칼국수",
@@ -4609,17 +4521,6 @@
     "longitude": 129.212276151407
   },
   {
-    "id": 420,
-    "category": "한식_일반",
-    "name": "범천매운탕",
-    "menu": "어탕국수",
-    "price": 7000,
-    "contact": "054-749-5705",
-    "address": "경상묵도 경주시 백률로 63(동천동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 421,
     "category": "한식_일반",
     "name": "천사바다블라썸",
@@ -4651,17 +4552,6 @@
     "address": "임자면 임자로 114-1",
     "latitude": 35.0847431,
     "longitude": 126.080322
-  },
-  {
-    "id": 424,
-    "category": "한식_기타",
-    "name": "수문풍천장어",
-    "menu": "우거지장어탕",
-    "price": 10000,
-    "contact": "061-275-1492",
-    "address": "압해읍 원산장길 10-2",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 425,
@@ -7106,17 +6996,6 @@
     "longitude": 126.9820929
   },
   {
-    "id": 647,
-    "category": "",
-    "name": "대가",
-    "menu": "고등어구이",
-    "price": 14000,
-    "contact": "061-383-7050",
-    "address": "고서면 가사문학로 619",
-    "latitude": 35.2230858,
-    "longitude": 126.973897
-  },
-  {
     "id": 648,
     "category": "한식_일반",
     "name": "한국별관",
@@ -7447,17 +7326,6 @@
     "longitude": 128.5706147
   },
   {
-    "id": 678,
-    "category": "",
-    "name": "마루통닭",
-    "menu": "후라이드치킨",
-    "price": 18000,
-    "contact": "054-791-4004",
-    "address": "울릉읍 도동길 95",
-    "latitude": 37.4853534,
-    "longitude": 130.9013529
-  },
-  {
     "id": 679,
     "category": "한식_일반",
     "name": "명품해물찜",
@@ -7489,17 +7357,6 @@
     "address": "경상북도 칠곡군 북삼읍 북삼로 30",
     "latitude": 36.0609398,
     "longitude": 128.3380412
-  },
-  {
-    "id": 682,
-    "category": "",
-    "name": "제일국밥",
-    "menu": "돼지국밥",
-    "price": 7000,
-    "contact": "054-972-9979",
-    "address": "경상북도 칠곡군 북삼읍 안산3길 31",
-    "latitude": 36.0680052,
-    "longitude": 128.3355602
   },
   {
     "id": 683,
@@ -7544,17 +7401,6 @@
     "address": "효목로5길 7(효목동)",
     "latitude": 35.8765918,
     "longitude": 128.6367521
-  },
-  {
-    "id": 687,
-    "category": "한식_일반",
-    "name": "도시락팜",
-    "menu": "제육볶음",
-    "price": 7000,
-    "contact": "053-552-8402",
-    "address": "대구광역시 서구 달구벌대로631길 12-1",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 688,
@@ -8787,17 +8633,6 @@
     "address": "진위면 가곡길 97",
     "latitude": 37.1181826462003,
     "longitude": 127.074274256818
-  },
-  {
-    "id": 800,
-    "category": "한식_일반",
-    "name": "온고을",
-    "menu": "옻닭",
-    "price": 60000,
-    "contact": "010-8835-0437",
-    "address": "계남면 음천길 40-27",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 801,
@@ -10384,17 +10219,6 @@
     "longitude": 126.6701344
   },
   {
-    "id": 945,
-    "category": "한식_일반",
-    "name": "술상&밥상",
-    "menu": "김치찌개",
-    "price": 7000,
-    "contact": "032-577-9305",
-    "address": "옺우물로26번길 8, 1층 (석남동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 946,
     "category": "한식_일반",
     "name": "거북골",
@@ -11517,17 +11341,6 @@
     "longitude": 126.5035365
   },
   {
-    "id": 1048,
-    "category": "이미용업",
-    "name": "가위나라",
-    "menu": "남성컷",
-    "price": 5000,
-    "contact": "-",
-    "address": "벌월길 75-4",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 1049,
     "category": "중식",
     "name": "백리향",
@@ -12065,28 +11878,6 @@
     "address": "봉방4길 5(봉방동)",
     "latitude": 36.9741445,
     "longitude": 127.9199267
-  },
-  {
-    "id": 1098,
-    "category": "한식_면류",
-    "name": "홍두깨장칼국수",
-    "menu": "장칼국수",
-    "price": 7000,
-    "contact": "033-255-5954",
-    "address": "춘추로 147번길 12-4(퇴계동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
-    "id": 1099,
-    "category": "한식_일반",
-    "name": "장군닭갈비",
-    "menu": "닭갈비(300g)",
-    "price": 12000,
-    "contact": "033-241-8342",
-    "address": "춘추로 147번길 12-6(퇴계동)",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 1100,
@@ -14927,17 +14718,6 @@
     "longitude": 128.2071402
   },
   {
-    "id": 1358,
-    "category": "이미용업",
-    "name": "예쁘게",
-    "menu": "파마",
-    "price": 40000,
-    "contact": "061-543-8253",
-    "address": "진도읍 임회면 석교길 2",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 1359,
     "category": "이미용업",
     "name": "다보헤어크럽",
@@ -15706,17 +15486,6 @@
     "address": "사천읍 시장1길 16",
     "latitude": 35.0840591089566,
     "longitude": 128.089011063881
-  },
-  {
-    "id": 1429,
-    "category": "한식_면류",
-    "name": "대박국수",
-    "menu": "국수",
-    "price": 5000,
-    "contact": "055-855-3030",
-    "address": "사천읍 새시장길 16-10",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 1430,
@@ -19074,17 +18843,6 @@
     "longitude": 128.034218082523
   },
   {
-    "id": 1735,
-    "category": "기타서비스업",
-    "name": "서현",
-    "menu": "아메리카노",
-    "price": 2500,
-    "contact": "02-504-5470",
-    "address": "새술막실 38, 103호",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 1736,
     "category": "이미용업",
     "name": "여심미용실",
@@ -19567,17 +19325,6 @@
     "address": "정산면 정현2길 8",
     "latitude": 36.4109296,
     "longitude": 126.9476716
-  },
-  {
-    "id": 1780,
-    "category": "기타서비스업",
-    "name": "청양농부방앗간",
-    "menu": "고춧가루가공비(1근)",
-    "price": 400,
-    "contact": "041-943-2577",
-    "address": "청양읍 칠깁산로 4길 25-3",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 1781,
@@ -20700,17 +20447,6 @@
     "address": "장평로 60(풍덕동)",
     "latitude": 34.9453417,
     "longitude": 127.4956028
-  },
-  {
-    "id": 1883,
-    "category": "한식_면류",
-    "name": "부광당",
-    "menu": "김치찌개",
-    "price": 6000,
-    "contact": "061-746-0066",
-    "address": "중앙로 지하 104 66,67호",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 1884,
@@ -24728,17 +24464,6 @@
     "longitude": 127.1688723137
   },
   {
-    "id": 2249,
-    "category": "한식_일반",
-    "name": "주막골 숯불 돼지갈비 삼겹살",
-    "menu": "돼지갈비",
-    "price": 13000,
-    "contact": "010-8955-8932",
-    "address": "금상로 108길 10",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 2250,
     "category": "한식_일반",
     "name": "엄니네 쌈냉면",
@@ -25639,17 +25364,6 @@
     "address": "정자로 146, 한솔빌딩 1층",
     "latitude": 37.3039484,
     "longitude": 126.9922441
-  },
-  {
-    "id": 2332,
-    "category": "이미용업",
-    "name": "모아미용실",
-    "menu": "커트",
-    "price": 8000,
-    "contact": "031-295-4005",
-    "address": "화산로 285번길18-20 화남아파트상가(율전동)",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 2333,
@@ -26794,17 +26508,6 @@
     "address": "장성1길 12",
     "latitude": 34.7546666,
     "longitude": 127.65585
-  },
-  {
-    "id": 2437,
-    "category": "한식_일반",
-    "name": "백천선어마을",
-    "menu": "게장백반",
-    "price": 12000,
-    "contact": "061-663-8252",
-    "address": "광화남2길 2 (공화동)",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 2438,
@@ -31383,17 +31086,6 @@
     "longitude": 127.5892078
   },
   {
-    "id": 2854,
-    "category": "한식_일반",
-    "name": "대포항횟집",
-    "menu": "물회(1인분)",
-    "price": 15000,
-    "contact": "031-775-8282",
-    "address": "양평읍 시장길 39, 1층",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 2855,
     "category": "한식_일반",
     "name": "청목장어",
@@ -32527,17 +32219,6 @@
     "longitude": 127.6982753
   },
   {
-    "id": 2958,
-    "category": "이미용업",
-    "name": "센스미용실",
-    "menu": "커트",
-    "price": 10000,
-    "contact": "061-663-7138",
-    "address": "이순실광장로 223-1",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 2959,
     "category": "이미용업",
     "name": "남성커트클럽 블루가이",
@@ -33504,17 +33185,6 @@
     "address": "달서구 선원로14길 21(신당동 1761-16)",
     "latitude": 35.8574089,
     "longitude": 128.4993524
-  },
-  {
-    "id": 3047,
-    "category": "한식_일반",
-    "name": "참좋은식당",
-    "menu": "김치찌개",
-    "price": 8000,
-    "contact": "061-353-1577",
-    "address": "영광읍 천년로 44길 31-1",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 3048,
@@ -37224,17 +36894,6 @@
     "longitude": 127.23852630039052
   },
   {
-    "id": 3385,
-    "category": "이미용업",
-    "name": "지오헤어샵",
-    "menu": "남성커트",
-    "price": 5000,
-    "contact": "042-841-2550",
-    "address": "엄사면 중앙로11 226-9",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 3386,
     "category": "한식_면류",
     "name": "명동막국수",
@@ -40599,17 +40258,6 @@
     "address": "표선면 세성로 265",
     "latitude": 33.3286715,
     "longitude": 126.7978001
-  },
-  {
-    "id": 3692,
-    "category": "한식_일반",
-    "name": "고성장터국밥",
-    "menu": "몸국",
-    "price": 7000,
-    "contact": "010-3691-4580",
-    "address": "성산읍 고성동서로45-19",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 3693,
@@ -44550,17 +44198,6 @@
     "longitude": 129.020062894885
   },
   {
-    "id": 4051,
-    "category": "기타양식",
-    "name": "구대회커피",
-    "menu": "아메리카노",
-    "price": 2500,
-    "contact": "02-716-8739",
-    "address": "창천로2길 9, 1층 (신수동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 4052,
     "category": "한식_면류",
     "name": "망원시장손칼국수",
@@ -47861,17 +47498,6 @@
     "longitude": 129.0848109
   },
   {
-    "id": 4352,
-    "category": "한식_일반",
-    "name": "전주웰빙새알팥죽",
-    "menu": "새알팥죽",
-    "price": 9000,
-    "contact": "031-953-1888",
-    "address": "문산읍 문항로17번길 21, 1층 102호",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 4353,
     "category": "한식_육류",
     "name": "참풍년집 정육식당",
@@ -50006,17 +49632,6 @@
     "longitude": 126.9183809
   },
   {
-    "id": 4547,
-    "category": "이미용업",
-    "name": "착한이발소",
-    "menu": "이발",
-    "price": 5000,
-    "contact": "054-475-8383",
-    "address": "홍안로1길 4, D동 105호(옥계동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 4548,
     "category": "이미용업",
     "name": "포맨",
@@ -50752,17 +50367,6 @@
     "address": "북면 정읍북로 610",
     "latitude": 35.6027265,
     "longitude": 126.8835115
-  },
-  {
-    "id": 4615,
-    "category": "한식_일반",
-    "name": "최민자국밥",
-    "menu": "콩나물국밥",
-    "price": 6000,
-    "contact": "063-533-3885",
-    "address": "칠보면 중앙로 109",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 4616,
@@ -53900,17 +53504,6 @@
     "longitude": 129.3434348
   },
   {
-    "id": 4901,
-    "category": "중식",
-    "name": "탕짜",
-    "menu": "짜장면",
-    "price": 5000,
-    "contact": "052-246-5566",
-    "address": "시계탑사거리 6(성남동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 4902,
     "category": "한식_찌개류",
     "name": "보글이식당",
@@ -55594,17 +55187,6 @@
     "longitude": 129.35573796464
   },
   {
-    "id": 5055,
-    "category": "한식_면류",
-    "name": "주안네손칼국수",
-    "menu": "들깨칼국수",
-    "price": 7000,
-    "contact": "052-286-2822",
-    "address": "호계3길 17-11 49,50호",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 5056,
     "category": "한식_일반",
     "name": "퇴근길",
@@ -57077,17 +56659,6 @@
     "address": "서천읍 서천향교길 2",
     "latitude": 36.0794333,
     "longitude": 126.6987761
-  },
-  {
-    "id": 5190,
-    "category": "한식_일반",
-    "name": "모시원 식당",
-    "menu": "냉면",
-    "price": 6000,
-    "contact": "041-951-0021",
-    "address": "한산면 한산모시길338번길 21",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 5191,
@@ -59136,17 +58707,6 @@
     "longitude": 127.6476598
   },
   {
-    "id": 5377,
-    "category": "중식",
-    "name": "천마루",
-    "menu": "짜장면",
-    "price": 5000,
-    "contact": "063-322-0433",
-    "address": "무주읍 안성면 장무로 1730",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 5378,
     "category": "한식_육류",
     "name": "남대천숯불갈비",
@@ -59387,17 +58947,6 @@
     "address": "봉동읍 봉동로 428",
     "latitude": 35.9594074,
     "longitude": 127.1340131
-  },
-  {
-    "id": 5400,
-    "category": "한식_일반",
-    "name": "할머니국수",
-    "menu": "국수(소)",
-    "price": 5000,
-    "contact": "063-261-2312",
-    "address": "봉동읍 동서로 138-1",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 5401,
@@ -60410,17 +59959,6 @@
     "address": "삼호읍 대불로 400",
     "latitude": 34.763864,
     "longitude": 126.3948581
-  },
-  {
-    "id": 5493,
-    "category": "한식_육류",
-    "name": "종원식육식당",
-    "menu": "김치찌개",
-    "price": 8000,
-    "contact": "061-462-0017",
-    "address": "삼호읍 세가레2길 26-17",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 5494,
@@ -62909,17 +62447,6 @@
     "longitude": 127.2467638
   },
   {
-    "id": 5720,
-    "category": "한식_일반",
-    "name": "최진사댁두부마을",
-    "menu": "돼지불백",
-    "price": 8000,
-    "contact": "02-926-7281",
-    "address": "인촌로1길 89",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 5721,
     "category": "이미용업",
     "name": "현정미용실",
@@ -63677,17 +63204,6 @@
     "address": "남부순환로57길 24-1",
     "latitude": 37.5336193,
     "longitude": 126.8309819
-  },
-  {
-    "id": 5790,
-    "category": "이미용업",
-    "name": "예성미용실",
-    "menu": "커트",
-    "price": 8000,
-    "contact": "02-2693-5274",
-    "address": "곰달래5길16",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 5791,
@@ -68684,17 +68200,6 @@
     "longitude": 127.403322980925
   },
   {
-    "id": 6245,
-    "category": "양식",
-    "name": "아저씨돈까스",
-    "menu": "돈까스",
-    "price": 7000,
-    "contact": "042-221-6595",
-    "address": "중앙로 164길 22-7(은행동)",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 6246,
     "category": "중식",
     "name": "영빈관식당",
@@ -71577,17 +71082,6 @@
     "longitude": 128.26750266116
   },
   {
-    "id": 6508,
-    "category": "한식_일반",
-    "name": "도진식육식당",
-    "menu": "삼겹살",
-    "price": 10000,
-    "contact": "054-955-4573",
-    "address": "우곡면 도진2길 13",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 6509,
     "category": "한식_일반",
     "name": "홍천뚝배기",
@@ -72378,17 +71872,6 @@
     "address": "공성면 옥산4길 15",
     "latitude": 36.2855788,
     "longitude": 128.0930966
-  },
-  {
-    "id": 6581,
-    "category": "한식_일반",
-    "name": "보리랑두부랑",
-    "menu": "보리밥",
-    "price": 7000,
-    "contact": "054-541-6234",
-    "address": "함창읍 합창중앙로 133",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 6582,
@@ -73368,17 +72851,6 @@
     "address": "삼호로 471",
     "latitude": 36.044792,
     "longitude": 129.3687978
-  },
-  {
-    "id": 6671,
-    "category": "한식_일반",
-    "name": "정명식당",
-    "menu": "된장찌개",
-    "price": 6000,
-    "contact": "252-1870",
-    "address": "해맞이공원길 15",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 6672,
@@ -75361,17 +74833,6 @@
     "longitude": 127.6344166
   },
   {
-    "id": 6852,
-    "category": "중식",
-    "name": "팔미원",
-    "menu": "짜장면",
-    "price": 5000,
-    "contact": "031-796-5654",
-    "address": "경기도 하남시 신장로1로15번길 74",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 6853,
     "category": "한식_일반",
     "name": "한우리식당",
@@ -76846,17 +76307,6 @@
     "longitude": 126.9588066
   },
   {
-    "id": 6987,
-    "category": "세탁업",
-    "name": "진흥세탁소",
-    "menu": "양복",
-    "price": 5000,
-    "contact": "031-442-7623",
-    "address": "양화로길71번길 24",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 6988,
     "category": "한식_육류",
     "name": "남부고기집",
@@ -77814,17 +77264,6 @@
     "longitude": 127.2668425
   },
   {
-    "id": 7075,
-    "category": "중식",
-    "name": "토토 중화요리",
-    "menu": "김치볶음밥",
-    "price": 6000,
-    "contact": "033-452-1015",
-    "address": "철원읍 명성로 171",
-    "latitude": "",
-    "longitude": ""
-  },
-  {
     "id": 7076,
     "category": "양식",
     "name": "스팅",
@@ -78043,17 +77482,6 @@
     "address": "원당로2길 69",
     "latitude": 37.4390359,
     "longitude": 129.1536972
-  },
-  {
-    "id": 7096,
-    "category": "한식_일반",
-    "name": "중앙시장식당",
-    "menu": "보리밥",
-    "price": 6000,
-    "contact": "033-572-9337",
-    "address": "진지로 12-21 중앙시장내 A동 63호",
-    "latitude": "",
-    "longitude": ""
   },
   {
     "id": 7097,
