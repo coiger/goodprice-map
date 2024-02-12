@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 
-import { Drawer, FloatButton } from 'antd';
-import { CloseOutlined, EnvironmentOutlined } from '@ant-design/icons';
+import { Button, Drawer } from 'antd';
+import { EnvironmentOutlined } from '@ant-design/icons';
 
 import Map from 'components/Map';
 import Search from 'components/Search';
@@ -45,8 +45,17 @@ function App() {
   return (
     <div>
       <Map center={position} setCenter={setPosition} places={places} categoryFilter={categoryFilter} />
-      <div className={`${styles.search} ${styles.box}`}>
-        <Search setPosition={setPosition} />
+      <div className={styles.search}>
+        <div className={styles.box}>
+          <Search setPosition={setPosition} />
+        </div>
+        <Button
+          className={styles['category-filter-btn']}
+          icon={<EnvironmentOutlined />}
+          shape='circle'
+          type='primary'
+          onClick={() => setShowCategoryFilter(true)}
+        />
       </div>
       <MyLocationButton setPosition={setPosition} />
       <Drawer
@@ -55,7 +64,6 @@ function App() {
         placement='right'
         onClose={() => setShowCategoryFilter(false)}
         open={showCategoryFilter}
-        closeIcon={false}
         width='100%'>
         <CategoryFilter
           categoryList={categoryList}
@@ -63,13 +71,7 @@ function App() {
           setCategoryFilter={setCategoryFilter}
         />
       </Drawer>
-      <FloatButton
-        className={styles['category-filter-btn']}
-        icon={showCategoryFilter ? <CloseOutlined /> : <EnvironmentOutlined />}
-        type='primary'
-        style={{ bottom: 24, right: 24 }}
-        onClick={() => setShowCategoryFilter(v => !v)}
-      />
+
       <MyGithubBtn />
     </div>
   );
