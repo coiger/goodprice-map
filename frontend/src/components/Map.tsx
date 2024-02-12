@@ -1,6 +1,6 @@
-import { memo, useEffect } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet';
-import { LatLngExpression } from 'leaflet';
+import { LatLngBounds, LatLngExpression } from 'leaflet';
 import Place from 'types/Place';
 import styles from './Map.module.css';
 
@@ -12,6 +12,8 @@ interface MapProps {
 }
 
 function Map({ center, setCenter, places, categoryFilter }: MapProps) {
+  const [bounds, setBounds] = useState<LatLngBounds | null>(null);
+
   function RecenterAutomatically({ center }: { center: LatLngExpression }) {
     const map = useMap();
 
@@ -31,11 +33,30 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
     return null;
   }
 
+  function SetBounds() {
+    const mapforload = useMapEvent('load', () => {
+      setBounds(mapforload.getBounds());
+    });
+
+    const mapforzoom = useMapEvent('zoomend', () => {
+      setBounds(mapforzoom.getBounds());
+    });
+
+    const mapformove = useMapEvent('moveend', () => {
+      setBounds(mapformove.getBounds());
+    });
+
+    return null;
+  }
+
   return (
     <MapContainer center={center} zoom={16} style={{ height: '100vh', width: '100vw' }}>
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       {places
-        .filter(({ category }) => categoryFilter.includes(category))
+        .filter(
+          ({ category, latitude, longitude }) =>
+            categoryFilter.includes(category) && bounds?.contains([latitude, longitude]),
+        )
         .map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
           <Marker
             key={id}
@@ -57,6 +78,7 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
         ))}
       <RecenterAutomatically center={center} />
       <SetViewOnClick />
+      <SetBounds />
     </MapContainer>
   );
 }
