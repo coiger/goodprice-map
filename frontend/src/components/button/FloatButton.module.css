@@ -4,8 +4,6 @@
   border-radius: 3px !important;
   border: 2px solid rgba(0, 0, 0, 0.2) !important;
   position: absolute !important;
-  left: 10.6px !important;
-  top: 79px !important;
   z-index: 1;
   background-color: #fff;
   padding: 0 !important;
@@ -15,6 +13,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.my-github-btn {
+  bottom: 10px !important;
+  left: 10.6px !important;
+}
+
+.my-location-btn {
+  top: 79px !important;
+  left: 10.6px !important;
 }
 
 .btn:hover {

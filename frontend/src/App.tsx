@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 
 import { Drawer, FloatButton } from 'antd';
-import { CloseOutlined, EnvironmentOutlined, GithubOutlined } from '@ant-design/icons';
+import { CloseOutlined, EnvironmentOutlined } from '@ant-design/icons';
 
 import Map from 'components/Map';
 import Search from 'components/Search';
 import CategoryFilter from 'components/CategoryFilter';
-import MyLocationButton from 'components/MyLocationButton';
+import MyLocationButton from 'components/button/MyLocationButton';
 
 import Place from 'types/Place';
 import { gotoUserLocation } from 'utils';
 import placesData from 'db/places.json';
 
+import MyGithubBtn from 'components/button/MyGithubBtn';
 import styles from './App.module.css';
 
 function App() {
@@ -69,13 +70,7 @@ function App() {
         style={{ bottom: 24, right: 24 }}
         onClick={() => setShowCategoryFilter(v => !v)}
       />
-      <a
-        href='https://github.com/coiger/goodprice.map'
-        target='_blank'
-        rel='noopener noreferrer'
-        aria-label='Open github repository'>
-        <FloatButton icon={<GithubOutlined />} type='default' style={{ top: 10, right: 10 }} />
-      </a>
+      <MyGithubBtn />
     </div>
   );
 }
