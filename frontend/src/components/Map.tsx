@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet';
 import { LatLngBounds, LatLngExpression } from 'leaflet';
 import Place from 'types/Place';
 import styles from './Map.module.css';
+
+const DEFAULT_ZOOM_LEVEL = 16;
 
 interface MapProps {
   center: LatLngExpression;
@@ -12,50 +15,42 @@ interface MapProps {
 }
 
 function Map({ center, setCenter, places, categoryFilter }: MapProps) {
-  const [bounds, setBounds] = useState<LatLngBounds | null>(null);
+  const [mapBounds, setMapBounds] = useState<LatLngBounds | null>(null);
 
   function RecenterAutomatically({ center }: { center: LatLngExpression }) {
     const map = useMap();
 
     useEffect(() => {
-      map.setView(center);
+      map.setView(center, DEFAULT_ZOOM_LEVEL);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [center]);
 
     return null;
   }
 
-  function SetViewOnClick() {
-    const map = useMapEvent('click', e => {
-      map.setView(e.latlng);
-    });
-
-    return null;
-  }
-
   function SetBounds() {
     const mapforload = useMapEvent('load', () => {
-      setBounds(mapforload.getBounds());
+      setMapBounds(mapforload.getBounds());
     });
 
     const mapforzoom = useMapEvent('zoomend', () => {
-      setBounds(mapforzoom.getBounds());
+      setMapBounds(mapforzoom.getBounds());
     });
 
     const mapformove = useMapEvent('moveend', () => {
-      setBounds(mapformove.getBounds());
+      setMapBounds(mapformove.getBounds());
     });
 
     return null;
   }
 
   return (
-    <MapContainer center={center} zoom={16} style={{ height: '100vh', width: '100vw' }}>
+    <MapContainer center={center} zoom={DEFAULT_ZOOM_LEVEL} style={{ height: '100vh', width: '100vw' }}>
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       {places
         .filter(
           ({ category, latitude, longitude }) =>
-            categoryFilter.includes(category) && bounds?.contains([latitude, longitude]),
+            categoryFilter.includes(category) && mapBounds?.contains([latitude, longitude]),
         )
         .map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
           <Marker
@@ -77,7 +72,6 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
           </Marker>
         ))}
       <RecenterAutomatically center={center} />
-      <SetViewOnClick />
       <SetBounds />
     </MapContainer>
   );
