@@ -1,5 +1,5 @@
 import { memo, useEffect } from 'react';
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
 import Place from 'types/Place';
 import styles from './Map.module.css';
@@ -18,6 +18,16 @@ function Map({ center, places, categoryFilter }: MapProps) {
       map.setView(center);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [center]);
+
+    return null;
+  }
+
+  function SetViewOnClick() {
+    const map = useMapEvent('click', e => {
+      map.setView(e.latlng, map.getZoom(), {
+        animate: true,
+      });
+    });
 
     return null;
   }
@@ -42,6 +52,7 @@ function Map({ center, places, categoryFilter }: MapProps) {
           </Marker>
         ))}
       <RecenterAutomatically center={center} />
+      <SetViewOnClick />
     </MapContainer>
   );
 }
