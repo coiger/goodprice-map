@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent, useMapEvents } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { LatLngBounds, LatLngExpression } from 'leaflet';
 import Place from 'types/Place';
 import styles from './Map.module.css';
+import RecenterMap from './RecenterMap';
+import SetMapBounds from './SetMapBounds';
 
 const DEFAULT_ZOOM_LEVEL = 16;
 
@@ -16,33 +18,6 @@ interface MapProps {
 
 function Map({ center, setCenter, places, categoryFilter }: MapProps) {
   const [mapBounds, setMapBounds] = useState<LatLngBounds | null>(null);
-
-  function RecenterAutomatically({ center }: { center: LatLngExpression }) {
-    const map = useMap();
-
-    useEffect(() => {
-      map.setView(center, DEFAULT_ZOOM_LEVEL);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [center]);
-
-    return null;
-  }
-
-  function SetBounds() {
-    const map = useMapEvents({
-      load: () => {
-        setMapBounds(map.getBounds());
-      },
-      zoomend: () => {
-        setMapBounds(map.getBounds());
-      },
-      moveend: () => {
-        setMapBounds(map.getBounds());
-      },
-    });
-
-    return null;
-  }
 
   return (
     <MapContainer center={center} zoom={DEFAULT_ZOOM_LEVEL} style={{ height: '100vh', width: '100vw' }}>
@@ -71,8 +46,8 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
             </Popup>
           </Marker>
         ))}
-      <RecenterAutomatically center={center} />
-      <SetBounds />
+      <RecenterMap center={center} zoom={DEFAULT_ZOOM_LEVEL} />
+      <SetMapBounds setMapBounds={setMapBounds} />
     </MapContainer>
   );
 }
