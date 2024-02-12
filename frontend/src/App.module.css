@@ -13,9 +13,12 @@
 .search > span {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
   border-radius: 6px !important;
+  flex: 1 1 0;
 }
 
 .category-filter-btn {
+  width: 36px !important;
+  height: 36px;
   margin-left: 5px;
 }
 

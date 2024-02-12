@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 
 import { Button, Drawer, FloatButton } from 'antd';
-import { AimOutlined, EnvironmentOutlined, GithubOutlined } from '@ant-design/icons';
+import { AimOutlined, FilterOutlined, GithubOutlined } from '@ant-design/icons';
 
 import Map from 'components/Map';
 import Search from 'components/Search';
@@ -47,8 +47,7 @@ function App() {
         <Search setPosition={setPosition} />
         <Button
           className={styles['category-filter-btn']}
-          icon={<EnvironmentOutlined />}
-          shape='circle'
+          icon={<FilterOutlined />}
           type='primary'
           onClick={() => setShowCategoryFilter(true)}
         />
