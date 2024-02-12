@@ -1,6 +1,8 @@
+import { memo } from 'react';
 import { Input, message } from 'antd';
 import { LatLngExpression } from 'leaflet';
-import { memo } from 'react';
+
+import styles from './Search.module.css';
 
 declare global {
   interface Window {
@@ -27,7 +29,14 @@ function Search({ setPosition }: SearchProps) {
     });
   };
 
-  return <Input.Search placeholder='검색한 위치로 지도가 이동합니다' allowClear onSearch={searchPosition} />;
+  return (
+    <Input.Search
+      className={styles.search}
+      placeholder='검색한 위치로 지도가 이동합니다'
+      allowClear
+      onSearch={searchPosition}
+    />
+  );
 }
 
 export default memo(Search);
