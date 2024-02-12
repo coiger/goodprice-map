@@ -33,7 +33,7 @@ function Map({ center, places, categoryFilter }: MapProps) {
   }
 
   return (
-    <MapContainer center={center} zoom={17} style={{ height: '100vh', width: '100vw' }}>
+    <MapContainer center={center} zoom={16} style={{ height: '100vh', width: '100vw' }}>
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       {places
         .filter(({ category }) => categoryFilter.includes(category))
