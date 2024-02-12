@@ -45,6 +45,9 @@ function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: Cat
       if (a === '한식_기타' || b === '한식_일반') return +1;
     }
 
+    if (b.includes('기타')) return -1;
+    if (a.includes('기타')) return +1;
+
     return a.localeCompare(b);
   };
 
