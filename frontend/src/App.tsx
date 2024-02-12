@@ -1,14 +1,18 @@
-import { Button, FloatButton } from 'antd';
-import { DownCircleOutlined, GithubOutlined, HomeOutlined, LinkOutlined, UpCircleOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
+
+import { Button, FloatButton } from 'antd';
+import { DownCircleOutlined, GithubOutlined, UpCircleOutlined } from '@ant-design/icons';
+
 import Map from 'components/Map';
 import Search from 'components/Search';
 import CategoryFilter from 'components/CategoryFilter';
+import MyLocationButton from 'components/MyLocationButton';
+
+import Place from 'types/Place';
 import { gotoUserLocation } from 'utils';
 import placesData from 'db/places.json';
-import Place from 'types/Place';
-import MyLocationButton from 'components/MyLocationButton';
+
 import styles from './App.module.css';
 
 function App() {
@@ -55,27 +59,13 @@ function App() {
           />
         </div>
       </div>
-      <FloatButton.Group
-        className={styles['btn-grp']}
-        trigger='click'
-        type='primary'
-        style={{ right: 24 }}
-        icon={<LinkOutlined />}>
-        <a
-          href='https://github.com/coiger/goodprice.map'
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='Open github repository'>
-          <FloatButton icon={<GithubOutlined />} />
-        </a>
-        <a
-          href='https://www.goodprice.go.kr/index.jsp'
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='Open goodprice homepage'>
-          <FloatButton icon={<HomeOutlined />} />
-        </a>
-      </FloatButton.Group>
+      <a
+        href='https://github.com/coiger/goodprice.map'
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='Open github repository'>
+        <FloatButton icon={<GithubOutlined />} type='default' style={{ top: 10, right: 10 }} />
+      </a>
     </div>
   );
 }
