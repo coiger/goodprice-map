@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/goodprice-map/static/css/main.3ff36e92.css",
-    "main.js": "/goodprice-map/static/js/main.5fb9fffd.js",
+    "main.css": "/goodprice-map/static/css/main.b4a74d7a.css",
+    "main.js": "/goodprice-map/static/js/main.a39d695f.js",
     "static/js/592.bf6ca574.chunk.js": "/goodprice-map/static/js/592.bf6ca574.chunk.js",
     "static/media/noto-sans-kr-korean-700-normal.woff": "/goodprice-map/static/media/noto-sans-kr-korean-700-normal.02ec4f7b0a45cad8e3e8.woff",
     "static/media/noto-sans-kr-korean-600-normal.woff": "/goodprice-map/static/media/noto-sans-kr-korean-600-normal.cd49516bc9a3c4e81fe7.woff",
@@ -16,12 +16,12 @@
     "static/media/noto-sans-kr-latin-600-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-latin-600-normal.30707168ec60635b9009.woff2",
     "static/media/noto-sans-kr-latin-400-normal.woff2": "/goodprice-map/static/media/noto-sans-kr-latin-400-normal.fd25d8b8e286c9fa82a0.woff2",
     "index.html": "/goodprice-map/index.html",
-    "main.3ff36e92.css.map": "/goodprice-map/static/css/main.3ff36e92.css.map",
-    "main.5fb9fffd.js.map": "/goodprice-map/static/js/main.5fb9fffd.js.map",
+    "main.b4a74d7a.css.map": "/goodprice-map/static/css/main.b4a74d7a.css.map",
+    "main.a39d695f.js.map": "/goodprice-map/static/js/main.a39d695f.js.map",
     "592.bf6ca574.chunk.js.map": "/goodprice-map/static/js/592.bf6ca574.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ff36e92.css",
-    "static/js/main.5fb9fffd.js"
+    "static/css/main.b4a74d7a.css",
+    "static/js/main.a39d695f.js"
   ]
 }
