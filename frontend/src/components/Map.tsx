@@ -7,7 +7,7 @@ import styles from './Map.module.css';
 import RecenterMap from './RecenterMap';
 import SetMapBounds from './SetMapBounds';
 
-const DEFAULT_ZOOM_LEVEL = 16;
+const DEFAULT_ZOOM_LEVEL = 14;
 
 interface MapProps {
   center: LatLngExpression;
