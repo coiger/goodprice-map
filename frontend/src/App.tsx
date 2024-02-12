@@ -27,7 +27,11 @@ function App() {
     }));
 
   const categoryList = Array.from(new Set(places.map(({ category }) => category)));
-  const [categoryFilter, setCategoryFilter] = useState<string[]>(categoryList);
+  const [categoryFilter, setCategoryFilter] = useState<string[]>(
+    categoryList.filter(
+      c => c !== '기타서비스업' && c !== '목욕업' && c !== '세탁업' && c !== '숙박업' && c !== '이미용업',
+    ),
+  );
 
   const [position, setPosition] = useState<LatLngExpression>([37.5537586, 126.9809696]); // 서울의 중심 남산
 
