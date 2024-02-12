@@ -1,8 +1,6 @@
-import { AimOutlined } from '@ant-design/icons';
 import { Input, message } from 'antd';
 import { LatLngExpression } from 'leaflet';
 import { memo } from 'react';
-import { gotoUserLocation } from 'utils';
 
 declare global {
   interface Window {
@@ -29,14 +27,7 @@ function Search({ setPosition }: SearchProps) {
     });
   };
 
-  return (
-    <Input.Search
-      placeholder='검색한 위치로 지도가 이동합니다'
-      allowClear
-      suffix={<AimOutlined className='pointer' onClick={gotoUserLocation(setPosition)} />}
-      onSearch={searchPosition}
-    />
-  );
+  return <Input.Search placeholder='검색한 위치로 지도가 이동합니다' allowClear onSearch={searchPosition} />;
 }
 
 export default memo(Search);

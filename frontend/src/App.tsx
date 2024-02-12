@@ -8,6 +8,7 @@ import CategoryFilter from 'components/CategoryFilter';
 import { gotoUserLocation } from 'utils';
 import placesData from 'db/places.json';
 import Place from 'types/Place';
+import MyLocationButton from 'components/MyLocationButton';
 import styles from './App.module.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <div className={`${styles.search} ${styles.box}`}>
         <Search setPosition={setPosition} />
       </div>
+      <MyLocationButton setPosition={setPosition} />
       <div className={`${styles.filter} ${styles.box} ${showFullCategoryList ? '' : styles.hidden}`}>
         <div className={styles['filter-inner']}>
           <CategoryFilter
