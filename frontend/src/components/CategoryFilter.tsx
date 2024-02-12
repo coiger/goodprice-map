@@ -1,6 +1,6 @@
-import { Space } from 'antd';
-import CheckableTag from 'antd/es/tag/CheckableTag';
 import { memo } from 'react';
+import { Checkbox, List } from 'antd';
+import styles from './CategoryFilter.module.css';
 
 interface CategoryFilterProps {
   categoryList: string[];
@@ -9,24 +9,52 @@ interface CategoryFilterProps {
 }
 
 function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: CategoryFilterProps) {
-  const handleChange = (tag: string, checked: boolean) => {
-    const nextCategoryFilter = checked ? [...categoryFilter, tag] : categoryFilter.filter(t => t !== tag);
+  const checkAll = categoryList.length === categoryFilter.length;
+  const indeterminate = categoryFilter.length > 0 && categoryFilter.length < categoryList.length;
+
+  const handleCheckAllChange = (checked: boolean) => {
+    setCategoryFilter(checked ? categoryList : []);
+  };
+
+  const handleChange = (category: string, checked: boolean) => {
+    const nextCategoryFilter = checked ? [...categoryFilter, category] : categoryFilter.filter(c => c !== category);
     setCategoryFilter(nextCategoryFilter);
   };
 
+  const toggleCheckedAll = () => {
+    handleCheckAllChange(!checkAll);
+  };
+
+  const toggleChecked = (category: string) => {
+    handleChange(category, !categoryFilter.includes(category));
+  };
+
   return (
-    <Space size={[0, 8]} wrap>
-      {categoryList
-        .sort((a, b) => a.localeCompare(b))
-        .map(category => (
-          <CheckableTag
+    <List
+      className={styles.list}
+      itemLayout='horizontal'
+      dataSource={categoryList.sort((a, b) => a.localeCompare(b))}
+      header={
+        <List.Item className='no-padding pointer' onClick={() => toggleCheckedAll()}>
+          <Checkbox
+            indeterminate={indeterminate}
+            onChange={e => handleCheckAllChange(e.target.checked)}
+            checked={checkAll}>
+            모두 선택
+          </Checkbox>
+        </List.Item>
+      }
+      renderItem={category => (
+        <List.Item className='pointer' onClick={() => toggleChecked(category)}>
+          <Checkbox
             key={category}
             checked={categoryFilter.includes(category)}
-            onChange={checked => handleChange(category, checked)}>
+            onChange={e => handleChange(category, e.target.checked)}>
             {category}
-          </CheckableTag>
-        ))}
-    </Space>
+          </Checkbox>
+        </List.Item>
+      )}
+    />
   );
 }
 

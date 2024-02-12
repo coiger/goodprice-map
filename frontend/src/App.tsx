@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 
-import { Button, FloatButton } from 'antd';
-import { DownCircleOutlined, GithubOutlined, UpCircleOutlined } from '@ant-design/icons';
+import { Drawer, FloatButton } from 'antd';
+import { CloseOutlined, EnvironmentOutlined, GithubOutlined } from '@ant-design/icons';
 
 import Map from 'components/Map';
 import Search from 'components/Search';
@@ -35,7 +35,7 @@ function App() {
     gotoUserLocation(setPosition)();
   }, []);
 
-  const [showFullCategoryList, setShowFullCategoryList] = useState<boolean>(true);
+  const [showCategoryFilter, setShowCategoryFilter] = useState<boolean>(false);
 
   return (
     <div>
@@ -44,21 +44,27 @@ function App() {
         <Search setPosition={setPosition} />
       </div>
       <MyLocationButton setPosition={setPosition} />
-      <div className={`${styles.filter} ${styles.box} ${showFullCategoryList ? '' : styles.hidden}`}>
-        <div className={styles['filter-inner']}>
-          <CategoryFilter
-            categoryList={categoryList}
-            categoryFilter={categoryFilter}
-            setCategoryFilter={setCategoryFilter}
-          />
-          <Button
-            className={styles['category-show-btn']}
-            type='text'
-            icon={showFullCategoryList ? <DownCircleOutlined /> : <UpCircleOutlined />}
-            onClick={() => setShowFullCategoryList(v => !v)}
-          />
-        </div>
-      </div>
+      <Drawer
+        rootClassName={styles.drawer}
+        title='업종을 선택해주세요'
+        placement='right'
+        onClose={() => setShowCategoryFilter(false)}
+        open={showCategoryFilter}
+        closeIcon={false}
+        width='100%'>
+        <CategoryFilter
+          categoryList={categoryList}
+          categoryFilter={categoryFilter}
+          setCategoryFilter={setCategoryFilter}
+        />
+      </Drawer>
+      <FloatButton
+        className={styles['category-filter-btn']}
+        icon={showCategoryFilter ? <CloseOutlined /> : <EnvironmentOutlined />}
+        type='primary'
+        style={{ bottom: 24, right: 24 }}
+        onClick={() => setShowCategoryFilter(v => !v)}
+      />
       <a
         href='https://github.com/coiger/goodprice.map'
         target='_blank'
