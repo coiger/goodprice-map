@@ -46,7 +46,7 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
             </Popup>
           </Marker>
         ))}
-      <RecenterMap center={center} zoom={DEFAULT_ZOOM_LEVEL} />
+      <RecenterMap center={center} defaultZoom={DEFAULT_ZOOM_LEVEL} />
       <SetMapBounds setMapBounds={setMapBounds} />
     </MapContainer>
   );

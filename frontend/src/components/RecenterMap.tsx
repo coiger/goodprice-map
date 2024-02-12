@@ -4,15 +4,16 @@ import { useMap } from 'react-leaflet';
 
 interface RecenterMapProps {
   center: LatLngExpression;
-  zoom: number;
+  defaultZoom: number;
 }
 
-function RecenterMap({ center, zoom }: RecenterMapProps) {
+function RecenterMap({ center, defaultZoom }: RecenterMapProps) {
   const map = useMap();
 
   useEffect(() => {
-    map.setView(center, zoom);
-  }, [center, map, zoom]);
+    const originalZoom = map.getZoom();
+    map.setView(center, Math.max(originalZoom, defaultZoom));
+  }, [center, map, defaultZoom]);
 
   return null;
 }
