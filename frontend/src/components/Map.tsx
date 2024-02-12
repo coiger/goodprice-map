@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent, useMapEvents } from 'react-leaflet';
 import { LatLngBounds, LatLngExpression } from 'leaflet';
 import Place from 'types/Place';
 import styles from './Map.module.css';
@@ -29,16 +29,16 @@ function Map({ center, setCenter, places, categoryFilter }: MapProps) {
   }
 
   function SetBounds() {
-    const mapforload = useMapEvent('load', () => {
-      setMapBounds(mapforload.getBounds());
-    });
-
-    const mapforzoom = useMapEvent('zoomend', () => {
-      setMapBounds(mapforzoom.getBounds());
-    });
-
-    const mapformove = useMapEvent('moveend', () => {
-      setMapBounds(mapformove.getBounds());
+    const map = useMapEvents({
+      load: () => {
+        setMapBounds(map.getBounds());
+      },
+      zoomend: () => {
+        setMapBounds(map.getBounds());
+      },
+      moveend: () => {
+        setMapBounds(map.getBounds());
+      },
     });
 
     return null;
