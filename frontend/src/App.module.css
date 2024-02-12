@@ -25,7 +25,7 @@
 }
 
 .drawer :global(.ant-drawer-content-wrapper) {
-  max-width: 378px;
+  max-width: 300px;
 }
 
 .drawer :global(.ant-drawer-body) {
