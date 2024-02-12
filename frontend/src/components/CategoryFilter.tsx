@@ -29,11 +29,30 @@ function CategoryFilter({ categoryList, categoryFilter, setCategoryFilter }: Cat
     handleChange(category, !categoryFilter.includes(category));
   };
 
+  const isFoodCategory = (category: string) =>
+    category.includes('양식') || category.includes('일식') || category.includes('중식') || category.includes('한식');
+
+  const isKoreanFoodCategory = (category: string) => category.includes('한식');
+
+  const compareCategory = (a: string, b: string) => {
+    if (isFoodCategory(a) && !isFoodCategory(b)) return -1;
+    if (!isFoodCategory(a) && isFoodCategory(b)) return +1;
+
+    if (isKoreanFoodCategory(a) && !isKoreanFoodCategory(b)) return -1;
+    if (!isKoreanFoodCategory(a) && isKoreanFoodCategory(b)) return +1;
+    if (isKoreanFoodCategory(a) && isKoreanFoodCategory(b)) {
+      if (a === '한식_일반' || b === '한식_기타') return -1;
+      if (a === '한식_기타' || b === '한식_일반') return +1;
+    }
+
+    return a.localeCompare(b);
+  };
+
   return (
     <List
       className={styles.list}
       itemLayout='horizontal'
-      dataSource={categoryList.sort((a, b) => a.localeCompare(b))}
+      dataSource={categoryList.sort(compareCategory)}
       header={
         <List.Item className='no-padding pointer' onClick={() => toggleCheckedAll()}>
           <Checkbox
