@@ -7,10 +7,11 @@ import Search from 'components/Search';
 import CategoryFilter from 'components/CategoryFilter';
 import { gotoUserLocation } from 'utils';
 import placesData from 'db/places.json';
+import Place from 'types/Place';
 import styles from './App.module.css';
 
 function App() {
-  const places = placesData
+  const places: Place[] = placesData
     .filter(({ category, latitude, longitude }) => category && latitude && longitude)
     .map(place => ({
       ...place,
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <Map center={position} places={places} categoryFilter={categoryFilter} />
+      <Map center={position} setCenter={setPosition} places={places} categoryFilter={categoryFilter} />
       <div className={`${styles.search} ${styles.box}`}>
         <Search setPosition={setPosition} />
       </div>

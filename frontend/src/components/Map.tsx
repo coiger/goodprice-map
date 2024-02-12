@@ -6,11 +6,12 @@ import styles from './Map.module.css';
 
 interface MapProps {
   center: LatLngExpression;
+  setCenter: (center: LatLngExpression) => void;
   places: Place[];
   categoryFilter: string[];
 }
 
-function Map({ center, places, categoryFilter }: MapProps) {
+function Map({ center, setCenter, places, categoryFilter }: MapProps) {
   function RecenterAutomatically({ center }: { center: LatLngExpression }) {
     const map = useMap();
 
@@ -24,9 +25,7 @@ function Map({ center, places, categoryFilter }: MapProps) {
 
   function SetViewOnClick() {
     const map = useMapEvent('click', e => {
-      map.setView(e.latlng, map.getZoom(), {
-        animate: true,
-      });
+      map.setView(e.latlng);
     });
 
     return null;
@@ -38,7 +37,12 @@ function Map({ center, places, categoryFilter }: MapProps) {
       {places
         .filter(({ category }) => categoryFilter.includes(category))
         .map(({ id, category, name, menu, price, contact, address, latitude, longitude }) => (
-          <Marker key={id} position={[latitude as number, longitude as number]}>
+          <Marker
+            key={id}
+            position={[latitude, longitude]}
+            eventHandlers={{
+              click: () => setCenter([latitude, longitude]),
+            }}>
             <Popup>
               <div className='default'>
                 <h3 className={styles.title}>{`[${category}] ${name}`}</h3>

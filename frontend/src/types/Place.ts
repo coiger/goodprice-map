@@ -6,8 +6,8 @@ interface Place {
   price: number;
   contact: string;
   address: string;
-  latitude?: number;
-  longitude?: number;
+  latitude: number;
+  longitude: number;
 }
 
 export default Place;
