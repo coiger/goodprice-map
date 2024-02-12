@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
 import { LatLngExpression } from 'leaflet';
 
-import { Button, Drawer } from 'antd';
-import { EnvironmentOutlined } from '@ant-design/icons';
+import { Button, Drawer, FloatButton } from 'antd';
+import { AimOutlined, EnvironmentOutlined, GithubOutlined } from '@ant-design/icons';
 
 import Map from 'components/Map';
 import Search from 'components/Search';
 import CategoryFilter from 'components/CategoryFilter';
-import MyLocationButton from 'components/button/MyLocationButton';
 
 import Place from 'types/Place';
 import { gotoUserLocation } from 'utils';
 import placesData from 'db/places.json';
 
-import MyGithubBtn from 'components/button/MyGithubBtn';
 import styles from './App.module.css';
 
 function App() {
@@ -46,9 +44,7 @@ function App() {
     <div>
       <Map center={position} setCenter={setPosition} places={places} categoryFilter={categoryFilter} />
       <div className={styles.search}>
-        <div className={styles.box}>
-          <Search setPosition={setPosition} />
-        </div>
+        <Search setPosition={setPosition} />
         <Button
           className={styles['category-filter-btn']}
           icon={<EnvironmentOutlined />}
@@ -57,7 +53,6 @@ function App() {
           onClick={() => setShowCategoryFilter(true)}
         />
       </div>
-      <MyLocationButton setPosition={setPosition} />
       <Drawer
         rootClassName={styles.drawer}
         title='업종을 선택해주세요'
@@ -72,7 +67,15 @@ function App() {
         />
       </Drawer>
 
-      <MyGithubBtn />
+      <FloatButton icon={<AimOutlined />} onClick={gotoUserLocation(setPosition)} style={{ bottom: 24, right: 24 }} />
+
+      <a
+        href='https://github.com/coiger/goodprice.map'
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='Open github repository'>
+        <FloatButton icon={<GithubOutlined />} style={{ bottom: 24, left: 24 }} />
+      </a>
     </div>
   );
 }
